@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- HealthyMind - Actividades | Front-end con Bootstrap 5 | SENA ADSO -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HealthyMind - Actividades</title>
+  <!-- Framework Bootstrap (estilos) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Estilos propios del proyecto -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <!-- Barra de navegación (componente navbar de Bootstrap, se adapta a celular) -->
+  <nav class="navbar navbar-expand-md bg-white border-bottom">
+    <div class="container">
+      <a class="navbar-brand marca" href="inicio.html">HEALTHY<span>MIND</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="inicio.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="actividades.html">Actividades</a></li>
+        <li class="nav-item"><a class="nav-link" href="foro.html">Foro</a></li>
+        <li class="nav-item"><a class="nav-link" href="notificaciones.html">Notificaciones</a></li>
+        <li class="nav-item"><a class="nav-link" href="perfil.html">Mi perfil</a></li>
+        </ul>
+        <span class="avatar" title="Luis Gonzalez">LG</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+    <div class="d-flex justify-content-between align-items-end flex-wrap gap-2 mb-4">
+      <div>
+        <div class="etiqueta">BIENESTAR</div>
+        <h1 class="h2 fw-bold mb-1">Actividades</h1>
+        <p class="text-secondary mb-0">Elige una actividad según lo que quieras trabajar hoy.</p>
+      </div>
+      
+    </div>
+
+    <!-- Botones de filtro (funcionan con js/app.js) -->
+    <div class="d-flex flex-wrap gap-2 mb-4">
+      <button type="button" class="btn btn-sm rounded-pill filtro btn-primary" data-filtro="todas">Todas</button>
+      <button type="button" class="btn btn-sm rounded-pill filtro btn-outline-secondary" data-filtro="memoria">Memoria</button>
+      <button type="button" class="btn btn-sm rounded-pill filtro btn-outline-secondary" data-filtro="relajacion">Relajación</button>
+      <button type="button" class="btn btn-sm rounded-pill filtro btn-outline-secondary" data-filtro="concentracion">Concentración</button>
+      </div>
+
+    <!-- Rejilla de tarjetas: 1 columna en celular, 2 en tablet, 3 en pantalla grande -->
+    <div class="row g-3">
+      <div class="col-md-6 col-lg-4 actividad" data-categoria="memoria">
+        <div class="card tarjeta h-100"><div class="card-body d-flex flex-column">
+          <div class="icono mb-3">🧩</div>
+          <div class="etiqueta">MEMORIA · 5 MIN</div>
+          <h2 class="h5 fw-bold">Memoria de parejas</h2>
+          <p class="text-secondary">Encuentra las parejas de cartas y completa el reto.</p>
+          <a href="#" class="btn btn-primary fw-semibold mt-auto align-self-start">Participar</a>
+        </div></div>
+      </div>
+      <div class="col-md-6 col-lg-4 actividad" data-categoria="relajacion">
+        <div class="card tarjeta h-100"><div class="card-body d-flex flex-column">
+          <div class="icono mb-3">🌿</div>
+          <div class="etiqueta">RELAJACIÓN · 3 MIN</div>
+          <h2 class="h5 fw-bold">Respiración guiada</h2>
+          <p class="text-secondary">Sigue una respiración sencilla para reducir la tensión.</p>
+          <a href="#" class="btn btn-primary fw-semibold mt-auto align-self-start">Participar</a>
+        </div></div>
+      </div>
+      <div class="col-md-6 col-lg-4 actividad" data-categoria="concentracion">
+        <div class="card tarjeta h-100"><div class="card-body d-flex flex-column">
+          <div class="icono mb-3">🎯</div>
+          <div class="etiqueta">CONCENTRACIÓN · 10 MIN</div>
+          <h2 class="h5 fw-bold">Enfoque consciente</h2>
+          <p class="text-secondary">Practica tu atención con una actividad interactiva.</p>
+          <a href="#" class="btn btn-primary fw-semibold mt-auto align-self-start">Participar</a>
+        </div></div>
+      </div>
+      <div class="col-md-6 col-lg-4 actividad" data-categoria="recurso">
+        <div class="card tarjeta h-100"><div class="card-body d-flex flex-column">
+          <div class="icono mb-3">📖</div>
+          <div class="etiqueta">RECURSO</div>
+          <h2 class="h5 fw-bold">Material educativo</h2>
+          <p class="text-secondary">Consulta contenido sobre hábitos y bienestar emocional.</p>
+          <a href="#" class="btn btn-light text-primary fw-semibold mt-auto align-self-start">Ver recurso</a>
+        </div></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="text-center py-4 small text-secondary">
+    HEALTHYMIND · <a href="#" class="text-secondary">TÉRMINOS Y CONDICIONES</a> ·
+    <a href="#" class="text-secondary">POLÍTICA DE PRIVACIDAD</a>
+  </footer>
+
+  <!-- Bootstrap (comportamiento) y script propio -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
